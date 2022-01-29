@@ -154,6 +154,7 @@
     <antcall target="iri2001"/>
 <!--    <antcall target="iri2007"/> -->
 <!--    <antcall target="iri2012"/> -->
+    <antcall target="iri2016"/>
   </target>
 
   <target name="magnetospheric" description="Install magnetospheric">
@@ -1047,6 +1048,94 @@
       <arg value="igrf.for"/>
       <arg value="cira.for"/>
       <arg value="iriflip.for"/>
+    </exec>
+  </target>
+
+  <target name="iri2016" description="Install iri2016">
+    <mkdir dir="${DST_IRI2016}"/>
+    <get src="${SRC_IRI2016}/00readme.txt" dest="${DST_IRI2016}/00readme.txt" />
+    <get src="${SRC_IRI2016}/apf107.dat" dest="${DST_IRI2016}/apf107.dat" /> 
+    <get src="${SRC_IRI2016}/apf107.dat.old" dest="${DST_IRI2016}/apf107.dat.old" /> 
+    <get src="${SRC_IRI2016}/ccir11.asc" dest="${DST_IRI2016}/ccir1.asc" /> 
+    <get src="${SRC_IRI2016}/ccir12.asc" dest="${DST_IRI2016}/ccir12.asc" /> 
+    <get src="${SRC_IRI2016}/ccir13.asc" dest="${DST_IRI2016}/ccir13.asc" /> 
+    <get src="${SRC_IRI2016}/ccir14.asc" dest="${DST_IRI2016}/ccir14.asc" /> 
+    <get src="${SRC_IRI2016}/ccir15.asc" dest="${DST_IRI2016}/ccir15.asc" /> 
+    <get src="${SRC_IRI2016}/ccir16.asc" dest="${DST_IRI2016}/ccir16.asc" /> 
+    <get src="${SRC_IRI2016}/ccir17.asc" dest="${DST_IRI2016}/ccir17.asc" /> 
+    <get src="${SRC_IRI2016}/ccir18.asc" dest="${DST_IRI2016}/ccir18.asc" /> 
+    <get src="${SRC_IRI2016}/ccir19.asc" dest="${DST_IRI2016}/ccir19.asc" /> 
+    <get src="${SRC_IRI2016}/ccir20.asc" dest="${DST_IRI2016}/ccir20.asc" /> 
+    <get src="${SRC_IRI2016}/ccir21.asc" dest="${DST_IRI2016}/ccir21.asc" /> 
+    <get src="${SRC_IRI2016}/ccir22.asc" dest="${DST_IRI2016}/ccir22.asc" /> 
+    <get src="${SRC_IRI2016}/cira.for" dest="${DST_IRI2016}/cira.for" />
+    <get src="${SRC_IRI2016}/dateJVE.f" dest="${DST_IRI2016}/dateJVE.f" /> 
+    <get src="${SRC_IRI2016}/dgrf1945.dat" dest="${DST_IRI2016}/dgrf1945.dat" /> 
+    <get src="${SRC_IRI2016}/dgrf1950.dat" dest="${DST_IRI2016}/dgrf1950.dat" /> 
+    <get src="${SRC_IRI2016}/dgrf1955.dat" dest="${DST_IRI2016}/dgrf1955.dat" /> 
+    <get src="${SRC_IRI2016}/dgrf1960.dat" dest="${DST_IRI2016}/dgrf1960.dat" /> 
+    <get src="${SRC_IRI2016}/dgrf1965.dat" dest="${DST_IRI2016}/dgrf1965.dat" /> 
+    <get src="${SRC_IRI2016}/dgrf1970.dat" dest="${DST_IRI2016}/dgrf1970.dat" /> 
+    <get src="${SRC_IRI2016}/dgrf1975.dat" dest="${DST_IRI2016}/dgrf1975.dat" /> 
+    <get src="${SRC_IRI2016}/dgrf1980.dat" dest="${DST_IRI2016}/dgrf1980.dat" /> 
+    <get src="${SRC_IRI2016}/dgrf1985.dat" dest="${DST_IRI2016}/dgrf1985.dat" /> 
+    <get src="${SRC_IRI2016}/dgrf1990.dat" dest="${DST_IRI2016}/dgrf1990.dat" /> 
+    <get src="${SRC_IRI2016}/dgrf1995.dat" dest="${DST_IRI2016}/dgrf1995.dat" />
+    <get src="${SRC_IRI2016}/dgrf2000.dat" dest="${DST_IRI2016}/dgrf2000.dat" />
+    <get src="${SRC_IRI2016}/dgrf2005.dat" dest="${DST_IRI2016}/dgrf2005.dat" />
+    <get src="${SRC_IRI2016}/dgrf2010.dat" dest="${DST_IRI2016}/dgrf2010.dat" /> 
+    <get src="${SRC_IRI2016}/ig_rz.dat" dest="${DST_IRI2016}/ig_rz.dat" /> 
+    <get src="${SRC_IRI2016}/igrf.for" dest="${DST_IRI2016}/igrf.for" />
+    <get src="${SRC_IRI2016}/igrf2015.dat" dest="${DST_IRI2016}/igrf2015.dat" />
+    <get src="${SRC_IRI2016}/igrf2015s.dat" dest="${DST_IRI2016}/igrf2015s.dat" /> 
+    <get src="${SRC_IRI2016}/iri_2D.1yr.2012.f" dest="${DST_IRI2016}/iri_2D.1yr.2012.f" /> 
+    <get src="${SRC_IRI2016}/iri_2D.2013.mar.f" dest="${DST_IRI2016}/iri_2D.2013.mar.f" /> 
+    <get src="${SRC_IRI2016}/iridreg.for" dest="${DST_IRI2016}/iridreg.for" />
+    <get src="${SRC_IRI2016}/iriflip.for" dest="${DST_IRI2016}/iriflip.for" /> 
+    <get src="${SRC_IRI2016}/irifun.for" dest="${DST_IRI2016}/irifun.for" /> 
+    <get src="${SRC_IRI2016}/irisub.for" dest="${DST_IRI2016}/irisub.for" /> 
+    <get src="${SRC_IRI2016}/iritec.for" dest="${DST_IRI2016}/iritec.for" /> 
+    <get src="${SRC_IRI2016}/iritest.for" dest="${DST_IRI2016}/iritest.for" />
+    <get src="${SRC_IRI2016}/make.csh" dest="${DST_IRI2016}/make.csh" />
+    <get src="${SRC_IRI2016}/mcsat11.dat" dest="${DST_IRI2016}/mcsat11.dat" />
+    <get src="${SRC_IRI2016}/mcsat12.dat" dest="${DST_IRI2016}/mcsat12.dat" />
+    <get src="${SRC_IRI2016}/mcsat13.dat" dest="${DST_IRI2016}/mcsat13.dat" />
+    <get src="${SRC_IRI2016}/mcsat14.dat" dest="${DST_IRI2016}/mcsat14.dat" />
+    <get src="${SRC_IRI2016}/mcsat15.dat" dest="${DST_IRI2016}/mcsat15.dat" />
+    <get src="${SRC_IRI2016}/mcsat16.dat" dest="${DST_IRI2016}/mcsat16.dat" />
+    <get src="${SRC_IRI2016}/mcsat17.dat" dest="${DST_IRI2016}/mcsat17.dat" />
+    <get src="${SRC_IRI2016}/mcsat18.dat" dest="${DST_IRI2016}/mcsat18.dat" />
+    <get src="${SRC_IRI2016}/mcsat19.dat" dest="${DST_IRI2016}/mcsat19.dat" />
+    <get src="${SRC_IRI2016}/mcsat20.dat" dest="${DST_IRI2016}/mcsat20.dat" />
+    <get src="${SRC_IRI2016}/mcsat21.dat" dest="${DST_IRI2016}/mcsat21.dat" />
+    <get src="${SRC_IRI2016}/mcsat22.dat" dest="${DST_IRI2016}/mcsat22.dat" />
+    <get src="${SRC_IRI2016}/station.fof2.2012.inc" dest="${DST_IRI2016}/station.fof2.2012.inc" />
+    <get src="${SRC_IRI2016}/station.fof2.inc" dest="${DST_IRI2016}/station.fof2.inc" /> 
+    <get src="${SRC_IRI2016}/ursi11.asc" dest="${DST_IRI2016}/ursi11.asc" /> 
+    <get src="${SRC_IRI2016}/ursi12.asc" dest="${DST_IRI2016}/ursi12.asc" /> 
+    <get src="${SRC_IRI2016}/ursi13.asc" dest="${DST_IRI2016}/ursi13.asc" /> 
+    <get src="${SRC_IRI2016}/ursi14.asc" dest="${DST_IRI2016}/ursi14.asc" /> 
+    <get src="${SRC_IRI2016}/ursi15.asc" dest="${DST_IRI2016}/ursi15.asc" /> 
+    <get src="${SRC_IRI2016}/ursi16.asc" dest="${DST_IRI2016}/ursi16.asc" /> 
+    <get src="${SRC_IRI2016}/ursi17.asc" dest="${DST_IRI2016}/ursi17.asc" /> 
+    <get src="${SRC_IRI2016}/ursi18.asc" dest="${DST_IRI2016}/ursi18.asc" /> 
+    <get src="${SRC_IRI2016}/ursi19.asc" dest="${DST_IRI2016}/ursi19.asc" /> 
+    <get src="${SRC_IRI2016}/ursi20.asc" dest="${DST_IRI2016}/ursi20.asc" /> 
+    <get src="${SRC_IRI2016}/ursi21.asc" dest="${DST_IRI2016}/ursi21.asc" /> 
+    <get src="${SRC_IRI2016}/ursi22.asc" dest="${DST_IRI2016}/ursi22.asc" /> 
+
+    <exec executable="${FC}" dir="${DST_IRI2016}">
+      <arg value="${FC_OPT}"/>
+      <arg value="-o"/>
+      <arg value="iritest"/>
+      <arg value="iritest.for"/>
+      <arg value="irisub.for"/>
+      <arg value="iriflip.for"/>
+      <arg value="irifun.for"/>
+      <arg value="iritec.for"/>
+      <arg value="iridreg.for"/>
+      <arg value="igrf.for"/>
+      <arg value="cira.for"/>
     </exec>
   </target>
 
