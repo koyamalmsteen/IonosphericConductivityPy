@@ -77,7 +77,8 @@
   <target name="all" depends="download"/>
   <target name="download" depends="clean,nasa,noaa"/>
   <target name="nasa" depends="models,atmospheric,geomagnetic,ionospheric,magnetospheric,planets,radiation_belt,solar"/>
-  <target name="noaa" depends="igrf11,ETOPO5"/>
+  <!--  <target name="noaa" depends="igrf11,ETOPO5"/> -->
+  <target name="noaa" depends="igrf11"/>
 
   <target name="models">
     <mkdir dir="${DST_MODELS}"/>
@@ -500,6 +501,24 @@
     </exec>
   </target>
 
+  <target name="igrf12" description="Install igrf12">
+    <mkdir dir="${DST_IGRF_NGDC}"/>
+    <get src="${SRC_IGRF_NGDC}/igrf12.f" dest="${DST_IGRF_NGDC}/igrf12.f" />
+    <exec executable="${FC}" dir="${DST_IGRF_NGDC}">
+      <arg value="${FC_OPT}"/>
+      <arg value="igrf12.f"/>
+    </exec>
+  </target>
+
+  <target name="igrf13" description="Install igrf13">
+    <mkdir dir="${DST_IGRF_NGDC}"/>
+    <get src="${SRC_IGRF_NGDC}/igrf13.f" dest="${DST_IGRF_NGDC}/igrf13.f" />
+    <exec executable="${FC}" dir="${DST_IGRF_NGDC}">
+      <arg value="${FC_OPT}"/>
+      <arg value="igrf13.f"/>
+    </exec>
+  </target>
+
   <target name="ETOPO5" description="Install ETOPO5">
     <mkdir dir="${DST_ETOPO5}"/>
     <get src="${SRC_ETOPO5}/readme.txt" dest="${DST_ETOPO5}/readme.txt" />
@@ -547,7 +566,7 @@
     <get src="${SRC_ETOPO5}/GAZETEER/IHOGAZ/ACCRED.DBF" dest="${DST_ETOPO5}/GAZETEER/IHOGAZ/ACCRED.DBF" />
     <get src="${SRC_ETOPO5}/GAZETEER/IHOGAZ/ACCRED1.NTX" dest="${DST_ETOPO5}/GAZETEER/IHOGAZ/ACCRED1.NTX" />
     <get src="${SRC_ETOPO5}/GAZETEER/IHOGAZ/ACRONY.DBF" dest="${DST_ETOPO5}/GAZETEER/IHOGAZ/ACRONY.DBF" />
-    <get src="${SRC_ETOPO5}/GAZETEER/IHOGAZ/ACRONY.NTX" dest="${DST_ETOPO5}/GAZETEER/IHOGAZ/ACRONY.NTX" />
+    <get src="${SRC_ETOPO5}/GAZETEER/IHOGAZ/ACRONY1.NTX" dest="${DST_ETOPO5}/GAZETEER/IHOGAZ/ACRONY1.NTX" />
     <get src="${SRC_ETOPO5}/GAZETEER/IHOGAZ/CATEGO.DBF" dest="${DST_ETOPO5}/GAZETEER/IHOGAZ/CATEGO.DBF" />
     <get src="${SRC_ETOPO5}/GAZETEER/IHOGAZ/CATEGO1.NTX" dest="${DST_ETOPO5}/GAZETEER/IHOGAZ/CATEGO1.NTX" />
     <get src="${SRC_ETOPO5}/GAZETEER/IHOGAZ/" dest="${DST_ETOPO5}/GAZETEER/IHOGAZ/" />
