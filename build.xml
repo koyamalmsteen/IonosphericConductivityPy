@@ -88,7 +88,6 @@
   <target name="atmospheric" description="Install atmospheric">
     <antcall target="cira"/>
     <antcall target="h_exos"/> 
-<!--    <antcall target="hwm07"/>  -->
     <antcall target="hwm93"/> 
     <antcall target="jacchia"/>
     <antcall target="met"/>
@@ -153,8 +152,6 @@
     <antcall target="iri90"/>
     <antcall target="iri95"/>
     <antcall target="iri2001"/>
-<!--    <antcall target="iri2007"/> -->
-<!--    <antcall target="iri2012"/> -->
     <antcall target="iri2016"/>
   </target>
 
@@ -210,36 +207,6 @@
 
   <target name="cira86" description="Install cira86">
     <mkdir dir="${DST_CIRA86}"/>
-    
-<!--
-    <get src="${SRC_CIRA86}/../Please_read.txt" dest="${DST_CIRA86}/../Please_read.txt" />
-    <get src="${SRC_CIRA86}/aareadme.txt" dest="${DST_CIRA86}/aareadme.txt" />
-    <get src="${SRC_CIRA86}/ch11.dat" dest="${DST_CIRA86}/ch11.dat" />
-    <get src="${SRC_CIRA86}/ch12.dat" dest="${DST_CIRA86}/ch12.dat" />
-    <get src="${SRC_CIRA86}/ch13.dat" dest="${DST_CIRA86}/ch13.dat" />
-    <get src="${SRC_CIRA86}/ch14.dat" dest="${DST_CIRA86}/ch14.dat" />
-    <get src="${SRC_CIRA86}/ch15.dat" dest="${DST_CIRA86}/ch15.dat" />
-    <get src="${SRC_CIRA86}/ch16.dat" dest="${DST_CIRA86}/ch16.dat" />
-    <get src="${SRC_CIRA86}/ch17.dat" dest="${DST_CIRA86}/ch17.dat" />
-    <get src="${SRC_CIRA86}/ch18.dat" dest="${DST_CIRA86}/ch18.dat" />
-    <get src="${SRC_CIRA86}/ch19.dat" dest="${DST_CIRA86}/ch19.dat" />
-    <get src="${SRC_CIRA86}/ch20.dat" dest="${DST_CIRA86}/ch20.dat" />
-    <get src="${SRC_CIRA86}/ch21.dat" dest="${DST_CIRA86}/ch21.dat" />
-    <get src="${SRC_CIRA86}/ch22.dat" dest="${DST_CIRA86}/ch22.dat" />
-    <get src="${SRC_CIRA86}/cirat.for" dest="${DST_CIRA86}/cirat.for" />
-    <get src="${SRC_CIRA86}/cp11.dat" dest="${DST_CIRA86}/cp11.dat" />
-    <get src="${SRC_CIRA86}/cp12.dat" dest="${DST_CIRA86}/cp12.dat" />
-    <get src="${SRC_CIRA86}/cp13.dat" dest="${DST_CIRA86}/cp13.dat" />
-    <get src="${SRC_CIRA86}/cp14.dat" dest="${DST_CIRA86}/cp14.dat" />
-    <get src="${SRC_CIRA86}/cp15.dat" dest="${DST_CIRA86}/cp15.dat" />
-    <get src="${SRC_CIRA86}/cp16.dat" dest="${DST_CIRA86}/cp16.dat" />
-    <get src="${SRC_CIRA86}/cp17.dat" dest="${DST_CIRA86}/cp17.dat" />
-    <get src="${SRC_CIRA86}/cp18.dat" dest="${DST_CIRA86}/cp18.dat" />
-    <get src="${SRC_CIRA86}/cp19.dat" dest="${DST_CIRA86}/cp19.dat" />
-    <get src="${SRC_CIRA86}/cp20.dat" dest="${DST_CIRA86}/cp20.dat" />
-    <get src="${SRC_CIRA86}/cp21.dat" dest="${DST_CIRA86}/cp21.dat" />
-    <get src="${SRC_CIRA86}/cp22.dat" dest="${DST_CIRA86}/cp22.dat" />
--->
   </target>
 
   <target name="cira86ascii" description="Install cira86ascii">
@@ -322,7 +289,6 @@
     <get src="${SRC_MSIS86}/AAREADME.TXT" dest="${DST_MSIS86}/AAREADME.TXT" />
     <get src="${SRC_MSIS86}/m86dri.doc" dest="${DST_MSIS86}/m86dri.doc" />
     <get src="${SRC_MSIS86}/m86dri.for" dest="${DST_MSIS86}/m86dri.for" />
-<!--    <get src="${SRC_MSIS86}/m86dri.log" dest="${DST_MSIS86}/m86dri.log" /> -->
     <get src="${SRC_MSIS86}/m86tes.dat" dest="${DST_MSIS86}/m86tes.dat" />
     <get src="${SRC_MSIS86}/m86tes.for" dest="${DST_MSIS86}/m86tes.for" />
     <get src="${SRC_MSIS86}/msis86.dat" dest="${DST_MSIS86}/msis86.dat" />
@@ -398,19 +364,6 @@
   <target name="cutoff_rigidity_sw/Word Document" description="Install cutoff_rigidity_sw_Word Document">
     <mkdir dir="${DST_CUTOFF_RIGIDITY_SW}/Word&#160;Document"/>
     <get src="${SRC_CUTOFF_RIGIDITY_SW/Word%20Document/lblz.doc" dest="${DST_CUTOFF_RIGIDITY_SW/Word%20Document}/lblz.doc" />
-<!--
-    <get src="'${SRC_CUTOFF_RIGIDITY_SW}/Word&#160;Document/rpt-1.doc'" dest="'${DST_CUTOFF_RIGIDITY_SW}/Word Document/rpt-1.doc'" />
-    <get src="${SRC_CUTOFF_RIGIDITY_SW}/Word Document/rpt-2.doc" dest="${DST_CUTOFF_RIGIDITY_SW}/Word Document/rpt-2.doc" />
-    <get src="${SRC_CUTOFF_RIGIDITY_SW}/Word Document/rpt-3.doc" dest="${DST_CUTOFF_RIGIDITY_SW}/Word Document/rpt-3.doc" />
-    <get src="${SRC_CUTOFF_RIGIDITY_SW}/Word Document/rpt-4.doc" dest="${DST_CUTOFF_RIGIDITY_SW}/Word Document/rpt-4.doc" />
-    <get src="${SRC_CUTOFF_RIGIDITY_SW}/Word Document/rpt-5.doc" dest="${DST_CUTOFF_RIGIDITY_SW}/Word Document/rpt-5.doc" />
-    <get src="${SRC_CUTOFF_RIGIDITY_SW}/Word Document/rpt-6.doc" dest="${DST_CUTOFF_RIGIDITY_SW}/Word Document/rpt-6.doc" />
-    <get src="${SRC_CUTOFF_RIGIDITY_SW}/Word Document/rpt-7.doc" dest="${DST_CUTOFF_RIGIDITY_SW}/Word Document/rpt-7.doc" />
-    <get src="${SRC_CUTOFF_RIGIDITY_SW}/Word Document/rpt-8.doc" dest="${DST_CUTOFF_RIGIDITY_SW}/Word Document/rpt-8.doc" />
-    <get src="${SRC_CUTOFF_RIGIDITY_SW}/Word Document/rpt-9.doc" dest="${DST_CUTOFF_RIGIDITY_SW}/Word Document/rpt-9.doc" />
-    <get src="${SRC_CUTOFF_RIGIDITY_SW}/Word Document/rpt-cvr.doc" dest="${DST_CUTOFF_RIGIDITY_SW}/Word Document/rpt-cvr.doc" />
-    <get src="${SRC_CUTOFF_RIGIDITY_SW}/Word Document/tblcnt.doc" dest="${DST_CUTOFF_RIGIDITY_SW}/Word Document/tblcnt.doc" />
--->
   </target>
 
   <target name="gsfc" description="Install gsfc">
@@ -724,9 +677,7 @@
 
   <target name="igrf/fortran_code" description="Install igrf/fortran_code">
     <mkdir dir="${DST_IGRF/FORTRAN_CODE}"/>
-<!--    <get src="${SRC_IGRF/FORTRAN_CODE}/00_readme.txt" dest="${DST_IGRF/FORTRAN_CODE}/00_readme.txt" /> -->
     <get src="${SRC_IGRF/FORTRAN_CODE}/bilcal.for" dest="${DST_IGRF/FORTRAN_CODE}/bilcal.for" />
-<!--    <get src="${SRC_IGRF/FORTRAN_CODE}/bilcal_log.txt" dest="${DST_IGRF/FORTRAN_CODE}/bilcal_log.txt" /> -->
     <get src="${SRC_IGRF/FORTRAN_CODE}/dgrf1945.dat" dest="${DST_IGRF/FORTRAN_CODE}/dgrf1945.dat" />
     <get src="${SRC_IGRF/FORTRAN_CODE}/dgrf1950.dat" dest="${DST_IGRF/FORTRAN_CODE}/dgrf1950.dat" />
     <get src="${SRC_IGRF/FORTRAN_CODE}/dgrf1955.dat" dest="${DST_IGRF/FORTRAN_CODE}/dgrf1955.dat" />
@@ -742,18 +693,6 @@
     <get src="${SRC_IGRF/FORTRAN_CODE}/dgrf2005.dat" dest="${DST_IGRF/FORTRAN_CODE}/dgrf2005.dat" />
     <get src="${SRC_IGRF/FORTRAN_CODE}/dgrf2010.dat" dest="${DST_IGRF/FORTRAN_CODE}/dgrf2010.dat" />
     <get src="${SRC_IGRF/FORTRAN_CODE}/dgrf2015.dat" dest="${DST_IGRF/FORTRAN_CODE}/dgrf2015.dat" />
-<!--    <get src="${SRC_IGRF/FORTRAN_CODE}/igrf1900.dat" dest="${DST_IGRF/FORTRAN_CODE}/igrf1900.dat" />
-    <get src="${SRC_IGRF/FORTRAN_CODE}/igrf1905.dat" dest="${DST_IGRF/FORTRAN_CODE}/igrf1905.dat" />
-    <get src="${SRC_IGRF/FORTRAN_CODE}/igrf1910.dat" dest="${DST_IGRF/FORTRAN_CODE}/igrf1910.dat" />
-    <get src="${SRC_IGRF/FORTRAN_CODE}/igrf1915.dat" dest="${DST_IGRF/FORTRAN_CODE}/igrf1915.dat" />
-    <get src="${SRC_IGRF/FORTRAN_CODE}/igrf1920.dat" dest="${DST_IGRF/FORTRAN_CODE}/igrf1920.dat" />
-    <get src="${SRC_IGRF/FORTRAN_CODE}/igrf1925.dat" dest="${DST_IGRF/FORTRAN_CODE}/igrf1925.dat" />
-    <get src="${SRC_IGRF/FORTRAN_CODE}/igrf1930.dat" dest="${DST_IGRF/FORTRAN_CODE}/igrf1930.dat" />
-    <get src="${SRC_IGRF/FORTRAN_CODE}/igrf1935.dat" dest="${DST_IGRF/FORTRAN_CODE}/igrf1935.dat" />
-    <get src="${SRC_IGRF/FORTRAN_CODE}/igrf1940.dat" dest="${DST_IGRF/FORTRAN_CODE}/igrf1940.dat" /> -->
-<!--    <get src="${SRC_IGRF/FORTRAN_CODE}/igrf2005.dat" dest="${DST_IGRF/FORTRAN_CODE}/igrf2005.dat" />
-    <get src="${SRC_IGRF/FORTRAN_CODE}/igrf2010.dat" dest="${DST_IGRF/FORTRAN_CODE}/igrf2010.dat" />
-    <get src="${SRC_IGRF/FORTRAN_CODE}/igrf2010s.dat" dest="${DST_IGRF/FORTRAN_CODE}/igrf2010s.dat" /> -->
     <get src="${SRC_IGRF/FORTRAN_CODE}/igrf2020.dat" dest="${DST_IGRF/FORTRAN_CODE}/igrf2020.dat" />
     <get src="${SRC_IGRF/FORTRAN_CODE}/igrf2020s.dat" dest="${DST_IGRF/FORTRAN_CODE}/igrf2020s.dat" />
     <get src="${SRC_IGRF/FORTRAN_CODE}/igrf_sub.for" dest="${DST_IGRF/FORTRAN_CODE}/igrf_sub.for" />
@@ -787,7 +726,6 @@
   <target name="feldstein_holzworth" description="Install feldstein_holzworth">
     <mkdir dir="${DST_FELDSTEIN_HOLZWORTH}"/>
     <get src="${SRC_FELDSTEIN_HOLZWORTH}/AAREADME.TXT" dest="${DST_FELDSTEIN_HOLZWORTH}/AAREADME.TXT" />
-<!--    <get src="${SRC_FELDSTEIN_HOLZWORTH}/AAREADME.TXT.bak" dest="${DST_FELDSTEIN_HOLZWORTH}/AAREADME.TXT.bak" /> -->
     <get src="${SRC_FELDSTEIN_HOLZWORTH}/oval.for" dest="${DST_FELDSTEIN_HOLZWORTH}/oval.for" />
     <exec executable="${FC}" dir="${DST_FELDSTEIN_HOLZWORTH}">
       <arg value="${FC_OPT}"/>
@@ -814,12 +752,6 @@
     <get src="${SRC_HMR}/hmcoef.dat" dest="${DST_HMR}/hmcoef.dat" />
     <get src="${SRC_HMR}/tape1.dat" dest="${DST_HMR}/tape1.dat" />
     <exec executable="${FC}" dir="${DST_HMR}">
-<!--
-      <arg value="${FC_OPT}"/>
-      <arg value="hm_main.for"/>
-      <arg value="hm_model.for"/>
-      <arg value="hm_subr.for"/>
--->
     </exec>
   </target>
 
@@ -851,7 +783,6 @@
     <get src="${SRC_IRI90}/ccir22.asc" dest="${DST_IRI90}/CCIR22.ASC" />
     <get src="${SRC_IRI90}/cira86.for" dest="${DST_IRI90}/cira86.for" /> 
     <get src="${SRC_IRI90}/irid12.for" dest="${DST_IRI90}/irid12.for" />
-<!--    <get src="${SRC_IRI90}/irid12.log" dest="${DST_IRI90}/irid12.log" />  -->
     <get src="${SRC_IRI90}/irif12.for" dest="${DST_IRI90}/irif12.for" /> 
     <get src="${SRC_IRI90}/iris12.for" dest="${DST_IRI90}/iris12.for" /> 
     <get src="${SRC_IRI90}/ursi11.asc" dest="${DST_IRI90}/URSI11.ASC" /> 
@@ -930,7 +861,6 @@
     <get src="${SRC_IRI95}/cira86.for" dest="${DST_IRI95}/cira86.for" /> 
     <get src="${SRC_IRI95}/ig_rz.dat" dest="${DST_IRI95}/ig_rz.dat" /> 
     <get src="${SRC_IRI95}/iri_test.for" dest="${DST_IRI95}/iri_test.for" /> 
-<!--    <get src="${SRC_IRI95}/iri_test.log" dest="${DST_IRI95}/iri_test.log" />  -->
     <get src="${SRC_IRI95}/iri_test.out" dest="${DST_IRI95}/iri_test.out" /> 
     <get src="${SRC_IRI95}/irif13.for" dest="${DST_IRI95}/irif13.for" /> 
     <get src="${SRC_IRI95}/iris13.for" dest="${DST_IRI95}/iris13.for" /> 
@@ -976,8 +906,6 @@
     <get src="${SRC_IRI2001}/ccir21.asc" dest="${DST_IRI2001}/ccir21.asc" /> 
     <get src="${SRC_IRI2001}/ccir22.asc" dest="${DST_IRI2001}/ccir22.asc" /> 
     <get src="${SRC_IRI2001}/cira.for" dest="${DST_IRI2001}/cira.for" /> 
-<!--    <get src="${SRC_IRI2001}/dgrf00.dat" dest="${DST_IRI2001}/dgrf00.dat" />  -->
-<!--    <get src="${SRC_IRI2001}/dgrf05.dat" dest="${DST_IRI2001}/dgrf05.dat" />  -->
     <get src="${SRC_IRI2001}/dgrf45.dat" dest="${DST_IRI2001}/dgrf45.dat" /> 
     <get src="${SRC_IRI2001}/dgrf50.dat" dest="${DST_IRI2001}/dgrf50.dat" /> 
     <get src="${SRC_IRI2001}/dgrf55.dat" dest="${DST_IRI2001}/dgrf55.dat" /> 
@@ -993,8 +921,6 @@
     <get src="${SRC_IRI2001}/igrf.for" dest="${DST_IRI2001}/igrf.for" /> 
     <get src="${SRC_IRI2001}/igrf00.dat" dest="${DST_IRI2001}/igrf00.dat" /> 
     <get src="${SRC_IRI2001}/igrf00s.dat" dest="${DST_IRI2001}/igrf00s.dat" /> 
-<!--    <get src="${SRC_IRI2001}/igrf10.dat" dest="${DST_IRI2001}/igrf10.dat" />  -->
-<!--    <get src="${SRC_IRI2001}/igrf10s.dat" dest="${DST_IRI2001}/igrf10s.dat" /> -->
     <get src="${SRC_IRI2001}/input.txt" dest="${DST_IRI2001}/input.txt" /> 
     <get src="${SRC_IRI2001}/inputne.txt" dest="${DST_IRI2001}/inputne.txt" /> 
     <get src="${SRC_IRI2001}/iridreg.for" dest="${DST_IRI2001}/iridreg.for" /> 
@@ -1269,7 +1195,6 @@
     <get src="${SRC_RADBELT/FORTRAN_CODE}/ap8min.asc" dest="${DST_RADBELT/FORTRAN_CODE}/ap8min.asc" /> 
     <get src="${SRC_RADBELT/FORTRAN_CODE}/ap8min.bin" dest="${DST_RADBELT/FORTRAN_CODE}/ap8min.bin" /> 
     <get src="${SRC_RADBELT/FORTRAN_CODE}/radbelt.for" dest="${DST_RADBELT/FORTRAN_CODE}/radbelt.for" /> 
-<!--    <get src="${SRC_RADBELT/FORTRAN_CODE}/radbelt.log" dest="${DST_RADBELT/FORTRAN_CODE}/radbelt.log" /> -->
     <get src="${SRC_RADBELT/FORTRAN_CODE}/trmfun.for" dest="${DST_RADBELT/FORTRAN_CODE}/trmfun.for" /> 
     <exec executable="${FC}" dir="${DST_RADBELT/FORTRAN_CODE}">
       <arg value="${FC_OPT}"/>
@@ -1366,8 +1291,6 @@
     <get src="${SRC_EUV91}/euv91sub.for" dest="${DST_EUV91}/euv91sub.for" />
     <get src="${SRC_EUV91}/f80183.dat" dest="${DST_EUV91}/f80183.dat" />
     <get src="${SRC_EUV91}/serfd.for" dest="${DST_EUV91}/serfd.for" />
-<!--    <get src="${SRC_EUV91}/update.log" dest="${DST_EUV91}/update.log" /> -->
-<!--    <get src="${SRC_EUV91}/update.log.bak" dest="${DST_EUV91}/update.log.bak" /> -->
     <exec executable="${FC}" dir="${DST_EUV91}">
       <arg value="${FC_OPT}"/>
       <arg value="euv91sub.for"/>
